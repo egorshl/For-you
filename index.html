@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Для тебя ❤️</title>
+<style>
+body{
+margin:0;min-height:100vh;display:grid;place-items:center;overflow:hidden;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+background:linear-gradient(145deg,#fff7f3,#fde7e1);color:#402b2b}
+.card{width:min(88vw,560px);padding:34px 26px 30px;border-radius:28px;
+background:rgba(255,255,255,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+box-shadow:0 18px 60px rgba(104,58,58,.14);text-align:center;position:relative;z-index:2;
+animation:appear 1.2s ease both}
+h1{margin:0 0 14px;font-size:clamp(28px,8vw,48px);line-height:1.05}
+p{margin:12px 0;font-size:clamp(17px,4.6vw,22px);line-height:1.55}
+.big{margin-top:18px;font-weight:700;color:#c96f73;font-size:clamp(20px,5.2vw,26px)}
+.heart{display:inline-block;animation:beat 1.25s ease-in-out infinite}
+.floating{position:absolute;bottom:-30px;font-size:22px;opacity:.72;animation:floatUp linear infinite;pointer-events:none;z-index:1}
+.f1{left:10%;animation-duration:8s}.f2{left:24%;animation-duration:10s;animation-delay:2s}
+.f3{left:68%;animation-duration:9s;animation-delay:1s}.f4{left:84%;animation-duration:11s;animation-delay:3s}
+.f5{left:48%;animation-duration:12s;animation-delay:4s}
+@keyframes appear{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.13)}}
+@keyframes floatUp{0%{transform:translateY(0);opacity:0}12%{opacity:.72}100%{transform:translateY(-115vh) rotate(24deg);opacity:0}}
+</style>
+</head>
+<body>
+<span class="floating f1">❤️</span><span class="floating f2">🤍</span>
+<span class="floating f3">❤️</span><span class="floating f4">💗</span><span class="floating f5">🤍</span>
+<main class="card">
+<h1>Для тебя <span class="heart">❤️</span></h1>
+<p>Я просто хотел напомнить тебе одну важную вещь.</p>
+<p>Я очень тебя люблю.</p>
+<p>И очень по тебе соскучился.</p>
+<p>Мне не хватает твоего голоса, твоей улыбки и просто тебя рядом.</p>
+<p class="big">Скорее бы тебя обнять ❤️</p>
+</main>
+</body>
+</html>
