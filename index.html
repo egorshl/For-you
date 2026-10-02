@@ -1,66 +1,10 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Для тебя ❤️</title>
-<style>
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
-body{background:linear-gradient(145deg,#fff7f3,#fde7e1);color:#402b2b;overflow:hidden}
-.screen{
- position:absolute;inset:0;display:grid;place-items:center;padding:24px;
- transition:opacity .55s ease,transform .55s ease;
-}
-.card{
- width:min(90vw,560px);padding:38px 25px;border-radius:30px;
- background:rgba(255,255,255,.78);
- box-shadow:0 18px 60px rgba(104,58,58,.14);
- text-align:center;
-}
-h1{margin:0 0 28px;font-size:clamp(30px,8vw,48px)}
-p{font-size:clamp(17px,4.6vw,22px);line-height:1.55;margin:12px 0}
-.buttons{display:flex;gap:14px;justify-content:center;margin-top:26px}
-.btn{
- display:inline-block;text-decoration:none;border:0;border-radius:18px;
- padding:15px 25px;font-size:19px;font-weight:700;font-family:inherit;
-}
-.yes{background:#c96f73;color:#fff;box-shadow:0 8px 22px rgba(201,111,115,.3)}
-.no{background:#eee5e3;color:#806c6c}
-.big{margin-top:18px;font-weight:700;color:#c96f73;font-size:clamp(20px,5.2vw,26px)}
-.heart{display:inline-block;animation:beat 1.25s ease-in-out infinite}
-#love{opacity:0;transform:scale(1.03);pointer-events:none}
-#love:target{opacity:1;transform:scale(1);pointer-events:auto}
-#love:target ~ #question{opacity:0;transform:scale(.98);pointer-events:none}
-.float{position:absolute;bottom:-35px;font-size:22px;animation:up linear infinite;opacity:0}
-.f1{left:12%;animation-duration:8s}.f2{left:30%;animation-duration:11s;animation-delay:2s}
-.f3{left:68%;animation-duration:9s;animation-delay:1s}.f4{left:85%;animation-duration:12s;animation-delay:3s}
-@keyframes beat{50%{transform:scale(1.14)}}
-@keyframes up{10%{opacity:.7}100%{transform:translateY(-115vh) rotate(20deg);opacity:0}}
-</style>
-</head>
-<body>
-<span class="float f1">❤️</span><span class="float f2">🤍</span><span class="float f3">💗</span><span class="float f4">❤️</span>
-
-<section id="love" class="screen">
- <main class="card">
-  <h1>Для тебя <span class="heart">❤️</span></h1>
-  <p>Я просто хотел напомнить тебе одну важную вещь.</p>
-  <p>Я очень тебя люблю.</p>
-  <p>И очень по тебе соскучился.</p>
-  <p>Мне не хватает твоего голоса, твоей улыбки и просто тебя рядом.</p>
-  <p class="big">Скорее бы тебя обнять ❤️</p>
- </main>
-</section>
-
-<section id="question" class="screen">
- <div class="card">
-  <h1>Ты скучаешь по мне? 🥺</h1>
-  <div class="buttons">
-   <a class="btn yes" href="#love">Да🥹</a>
-   <span class="btn no">Нет😔</span>
-  </div>
- </div>
-</section>
-</body>
-</html>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Для тебя ❤️</title>
+<style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(145deg,#fff7f3,#f6ded9);color:#392a2a}.page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:22px;opacity:0;transform:translateX(30px);pointer-events:none;transition:.5s}.page.active{opacity:1;transform:none;pointer-events:auto}.card{width:min(92vw,520px);max-height:92vh;overflow:auto;text-align:center;background:#ffffffc9;border-radius:30px;padding:22px;box-shadow:0 20px 70px #50303024}h1{font-size:clamp(29px,8vw,46px);margin:8px 0 16px}h2{font-size:clamp(24px,7vw,36px);margin:6px 0 14px}p{font-size:clamp(17px,4.5vw,21px);line-height:1.5}.photo,video{width:100%;max-height:56vh;object-fit:cover;border-radius:22px;margin-bottom:14px}button{border:0;border-radius:18px;padding:14px 22px;font:700 18px inherit;margin:8px 5px}.yes,.next{background:#c96f73;color:white}.no{background:#eee5e3;color:#806c6c}.love{color:#c96f73;font-weight:800}.small{font-size:14px;opacity:.55}.heart{display:inline-block;animation:b 1.15s infinite}@keyframes b{50%{transform:scale(1.15)}}.dots{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:9;display:flex;gap:6px}.dot{width:6px;height:6px;border-radius:50%;background:#9d7777;opacity:.25}.dot.on{opacity:.9}</style></head><body>
+<section class="page active"><div class="card"><h1>У меня для тебя кое-что есть… ❤️</h1><p>Это займёт всего пару минут. Но для меня это важно.</p><button class="yes" onclick="go(1)">Посмотреть 🥹</button></div></section>
+<section class="page"><div class="card"><img class="photo" src="photo3.jpeg"><h2>Знаешь, что мне нравится в этих фотографиях?</h2><p>Не места. Не красивые виды. А то, что на них мы с тобой.</p><button class="next" onclick="go(2)">Дальше ❤️</button></div></section>
+<section class="page"><div class="card"><img class="photo" src="photo2.jpeg"><h2>Я люблю наши маленькие моменты</h2><p>Вроде бы обычный день… а потом он становится воспоминанием, которое хочется сохранить.</p><button class="next" onclick="go(3)">Ещё одно 🥹</button></div></section>
+<section class="page"><div class="card"><video src="moment.mp4" controls playsinline></video><h2>И таких моментов я хочу ещё сотни</h2><p>Смешных, красивых, случайных. Неважно каких — главное, вместе.</p><button class="next" onclick="go(4)">Дальше ❤️</button></div></section>
+<section class="page"><div class="card"><img class="photo" src="photo5.jpeg"><h2>Иногда я просто смотрю на нас…</h2><p>…и понимаю, насколько сильно мне повезло встретить тебя. ❤️</p><button class="next" onclick="go(5)">Дальше ❤️</button></div></section>
+<section class="page"><div class="card"><img class="photo" src="photo1.jpeg"><h2>А сейчас мне особенно не хватает одного…</h2><p>Вот этого. Тебя рядом. Твоих объятий. И возможности просто взять и поцеловать тебя.</p><button class="next" onclick="go(6)">Последняя страничка ❤️</button></div></section>
+<section class="page"><div class="card"><img class="photo" src="photo4.jpeg"><h1>Поэтому я сделал эту маленькую открытку <span class="heart">❤️</span></h1><p>Чтобы даже когда между нами расстояние, ты знала: есть человек, который думает о тебе, скучает по тебе и очень тебя любит.</p><p class="love">Жду момента, когда снова увижу тебя ❤️</p><p class="small">Эта открытка — только для тебя.</p></div></section>
+<div class="dots"></div><script>const p=[...document.querySelectorAll(".page")],d=document.querySelector(".dots");p.forEach((_,i)=>{let x=document.createElement("i");x.className="dot"+(i?"":" on");d.appendChild(x)});function go(n){p.forEach((x,i)=>x.classList.toggle("active",i===n));[...d.children].forEach((x,i)=>x.classList.toggle("on",i===n))}</script></body></html>
